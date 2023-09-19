@@ -41,7 +41,9 @@ WHERE last_name LIKE '%es' AND strore_id = 1
 --#9
 SELECT COUNT(amount),amount
 FROM payment
-WHERE customer_id 
+WHERE customer_id Between 380 AND 430
+GROUP BY amount
+Having Count (amount) > 250;
 
 --#10
 SELECT COUNT(rating), rating
